@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <h3>Summary by State</h3>
+    <table id="myTable" class='table table-striped'>
+
+        <thead>
+
+            <table id="demo">
+                {% for row in csv %}
+                  <tr>
+                  {% for col in row.split(",") %}
+                  <td>{{ col }}</td>
+                  {% endfor %}
+                  </tr>
+                {% endfor %}
+                </table>
+
+            <tr>
+                <!-- <th>{{ columns }}</th>
+
+
+                {% for j in columns%}
+                <th>{{ j }}</th>
+                
+                {% endfor %} -->
+            </tr>
+        </thead>
+    </table>
+</body>
+</html>
